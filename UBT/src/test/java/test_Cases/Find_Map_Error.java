@@ -22,7 +22,8 @@ public class Find_Map_Error
     private WebDriver driver;
     private DevTools devTools;
 
-    @BeforeClass
+    @SuppressWarnings("deprecation")
+	@BeforeClass
     public void setUp() {
         // Set the path to your ChromeDriver
         System.setProperty("webdriver.chrome.driver", "/Users/divyanshupriyadarshi/chromedriver-mac-arm64/chromedriver");

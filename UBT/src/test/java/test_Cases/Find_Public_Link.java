@@ -115,13 +115,12 @@ public class Find_Public_Link extends Base_Class
         }
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({ "unused", "deprecation" })
 	private void checkLink(String url) 
     {
         try 
         {
-            @SuppressWarnings("deprecation")
-			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestMethod("GET");
             connection.connect();
             int responseCode = connection.getResponseCode();
